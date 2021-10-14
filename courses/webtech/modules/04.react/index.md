@@ -18,7 +18,7 @@ React is a declarative, efficient, and flexible JavaScript library for building 
 * Created by Jordan Walke at Facebook
 * First deployed on Facebook’s newsfeed in 2011, Instagram in 2012
 * Released under the MIT License as an open source project in May of 2013
-* Additional projects such as React Native for mobile and React Fiber would follow in 2015 and 2017 respectively 
+* Additional projects such as React Native for mobile would follow in 2015 
 
 ## How is it different
 
@@ -75,8 +75,8 @@ ReactDOM.render(
 
 * A function component starts with a function, obviously
 * A basic example: 
-  ```
-  const Title() => {
+  ```jsx
+  const Title = () => {
     return (
       <div>
         <h1>How Is This Possible?</h1>
@@ -122,11 +122,18 @@ ReactDOM.render(
 
 ## One-way data flow example
 
-```js
-function Display(props) {
-  return ( <div>{props.message}</div> );
+```jsx
+const User = (props) => {
+  return (
+    <div>{user.username}</div>
+  );
 }
-<Display message={counter.counterValue} />
+const Layout = (props) => {
+  return (
+    <User user={props.user} />
+  );
+}
+<Layout user={username: 'david'} />
 ```
 
 Here, The App parent (below) Flows property data to the Child Display component (above) 

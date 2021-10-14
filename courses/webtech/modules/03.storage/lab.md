@@ -16,6 +16,35 @@ The relationships are as follow:
 - messages have a single author
 - no need for a user to list the messages he sent
 
+Assuming that JS object have sorted keys, this a representation of the storage:
+
+```json
+{
+  "user:3002": {
+    "username": "geoffrey",
+    "password": "rki903ir09io"
+  },
+  "user:3920": {
+    "username": "david",
+    "password": "32u0fjioer"
+  },
+  "channel:1902": {
+    "name": "Channel 1"
+  },
+  "channel:1902:message:1288329299": {
+    "author": "3920",
+    "content": "ping"
+  },
+  "channel:1902:message:1288339049": {
+    "author": "3002",
+    "content": "pong"
+  },
+  "channel:9302": {
+    "name": "Channel 2"
+  }
+}
+```
+
 ## Part 1: test coverage for every entity
 
 The storage is currently using an in-memory `store` object located inside the `lib/db` module. It is not persistent. A new process will create a new database.
