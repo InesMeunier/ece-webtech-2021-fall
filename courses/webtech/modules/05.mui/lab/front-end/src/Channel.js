@@ -1,11 +1,11 @@
+
+/** @jsxImportSource @emotion/react */
 import {useRef, useState} from 'react';
 import axios from 'axios';
-/** @jsx jsx */
-import { jsx } from '@emotion/core'
 // Layout
-import { useTheme } from '@material-ui/core/styles';
-import Fab from '@material-ui/core/Fab';
-import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
+import { useTheme } from '@mui/styles';
+import { Fab } from '@mui/material';
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 // Local
 import Form from './channel/Form'
 import List from './channel/List'
@@ -34,9 +34,9 @@ const useStyles = (theme) => ({
   }
 })
 
-export default ({
+export default function Channel({
   channel
-}) => {
+}) {
   const styles = useStyles(useTheme())
   const listRef = useRef();
   const channelId = useRef()
