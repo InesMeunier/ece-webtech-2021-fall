@@ -13,6 +13,7 @@ const styles = {
     flex: '1 1 auto',
     display: 'flex',
     flexDirection: 'row',
+    position: 'relative',
   },
 }
 

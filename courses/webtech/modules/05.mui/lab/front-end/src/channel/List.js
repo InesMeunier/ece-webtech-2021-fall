@@ -22,7 +22,6 @@ dayjs.updateLocale('en', {
 
 const useStyles = (theme) => ({
   root: {
-    position: 'relative',
     flex: '1 1 auto',
     overflow: 'auto',
     '& ul': {
@@ -35,19 +34,8 @@ const useStyles = (theme) => ({
   message: {
     padding: '.2rem .5rem',
     ':hover': {
-      backgroundColor: 'rgba(255,255,255,.05)',
+      backgroundColor: 'rgba(255,255,255,.2)',
     },
-  },
-  fabWrapper: {
-    position: 'absolute',
-    right: 0,
-    top: 0,
-    width: '50px',
-  },
-  fab: {
-    position: 'fixed !important',
-    top: 0,
-    width: '50px',
   },
 })
 
