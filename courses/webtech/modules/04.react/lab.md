@@ -15,12 +15,12 @@ A basic React application created with [`create-react-app`](https://create-react
 It is now the right time to reorganize/refactor our code. Split this monolithic
 react Component into multiple sections. In the end, we should end up with the
 following components: `Header`, `Footer`, `Main`, `Channels`, `Channel`,
-`Messages`, `MessageSend`.
+`Messages`, `MessageForm`.
 
 - `App.js` file uses `Header.js`, `Main.js`, `Footer.js`
 - `Main.js` file uses `Channels.js`, `Channel.js`
 - `Channels.js` prints the list of channels
-- `Channel.js` prints the messages, composed of `Messages.js` and `MessageSend.js`
+- `Channel.js` prints the messages, composed of `Messages.js` and `MessageForm.js`
 - `Messages.js` prints the list of messages inside the current channel
 - `MessageForm.js` send a new message
 
@@ -32,7 +32,7 @@ following components: `Header`, `Footer`, `Main`, `Channels`, `Channel`,
 |               | +------------------------+ |
 |               | |        Messages        | |
 |               | +------------------------+ |
-|               | |      MessageSend       | |
+|               | |      MessageForm       | |
 |               | +------------------------+ |
 +--------------------------------------------+
 |                  Footer                    |
