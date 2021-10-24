@@ -11,7 +11,7 @@ We will practice with the integration of [MUI (formerly Material-UI) components]
 
 ## 1. Learn with Video (easy level)
 
-I propose to start by watching a few videos. The playlist [Google Design Tutorials](https://material.io/blog/google-design-tutorial-video) (available inside the first video) proposes short videos of 3 to 5 minutes each. Pick up the one you wish. Then, watch the [introduction to MUI](https://www.youtube.com/watch?v=pHclLuRolzE&list=PLQg6GaokU5CwiVmsZ0d_9Zsg_DnIP_xwr) which is 16 minutes long.
+Start by watching a few videos. The playlist [Google Design Tutorials](https://material.io/blog/google-design-tutorial-video) (available inside the first video) proposes short videos of 3 to 5 minutes each. Pick up the one you wish. Then, watch the [introduction to MUI](https://www.youtube.com/watch?v=pHclLuRolzE&list=PLQg6GaokU5CwiVmsZ0d_9Zsg_DnIP_xwr) which is 16 minutes long.
 
 ## 2. React form components (medium level)
 
