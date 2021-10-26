@@ -7,7 +7,7 @@ OAuth2 and OpenID Connect enable the delegation of authorisation to an external 
 
 I recommand to start by watching the excellent video [*An Illustrated Guide to OAuth and OpenID Connect*](https://developer.okta.com/blog/2019/10/21/illustrated-guide-to-oauth-and-oidc) (about 16 minutes) to refresh your memory.
 
-I write two articles which clarify and cover the [basics of OpenID Connect](https://www.adaltas.com/en/2020/11/17/oauth-openid-connect-intro/) and how to [integrate it with your public Application](https://www.adaltas.com/en/2020/11/20/oauth-microservices-public-app/). The latter comes with a [functional application](https://github.com/adaltas/node-openid-cli-usage/) from which you shall get inspiration by reading its source code.
+I wrote two articles which clarify and cover the [basics of OpenID Connect](https://www.adaltas.com/en/2020/11/17/oauth-openid-connect-intro/) and how to [integrate it with your public Application](https://www.adaltas.com/en/2020/11/20/oauth-microservices-public-app/). The latter comes with a [functional application](https://github.com/adaltas/node-openid-cli-usage/) from which you shall get inspiration by reading its source code.
 
 Read those articles carefully. You will apply the steps of the second article in the next assignment.
 
