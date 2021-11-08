@@ -7,14 +7,19 @@ duration: 1.5 hours
 
 When react applications grow and gain more additionnal complexity, sharing data between the components and updating the comportant in sync with new values become cumbersome. Traditionnally, there were solutions to circumvent such as Redux and Mobx. The recent addition of the Context API in React simplify state management.
 
-
-
 ## State in components
+
+This is how state is used without a React context.
 
 ```js
 const Greeting = ({user}) => {
   return (
     <span>Hello (user ? {user.username} : 'anonymous')</span>
+  )
+}
+const Box = ({user}) => {
+  return (
+    <Greeting user={user} />
   )
 }
 const Counter = ({props} => {
@@ -25,17 +30,15 @@ const Counter = ({props} => {
   const [user, setUser] = useState(null);
   return (
     <div>
-      <Greeting user={user} />
       <span>{count}</span>
       <button onClick={(e) => {increment(1)}}>Incr by 1</button>
       <button onClick={(e) => {increment(2)}}>Incr by 2</button>
+      <Box user={user} />
       <button onClick={(e) => {setUser({username: 'david'})}}>Login</button>
     </div>
   )
 })
 ```
-
-
 
 ## Why
 
