@@ -14,7 +14,7 @@ When react applications grow and gain more additionnal complexity, sharing data 
 ```js
 const Greeting = ({user}) => {
   return (
-  	<span>Hello (user ? {user.username} : 'anonymous')</span>
+    <span>Hello (user ? {user.username} : 'anonymous')</span>
   )
 }
 const Counter = ({props} => {
@@ -83,7 +83,7 @@ import React, {useState} from 'react'
 
 export const Context = React.createContext();
 
-export const Provider ({
+export const ContextProvider ({
   children
 }) => {
   const [count, setCount] = useState(0)
@@ -112,6 +112,8 @@ export const Provider ({
 ## Example - Provider registration
 
 ```jsx
+import ContextProvider from './Context'
+
 ReactDOM.render(
   <React.StrictMode>
     <ContextProvider>
@@ -130,6 +132,7 @@ ReactDOM.render(
 
 ```js
 import {useContext} from 'react';
+import {Context} from './Context'
 
 const LoggedOut () => {
   const {login} = useContext(Context)
