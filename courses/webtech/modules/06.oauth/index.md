@@ -5,24 +5,24 @@ duration: 1.5 hours
 
 # OAuth and OpenID Connect
 
-OAuth 2.0 is designed only for authorization, for granting access to data and features from one application to another. OpenID Connect (OIDC) is a thin layer that sits on top of OAuth 2.0 that adds login and profile information about the person who is logged in.
+[OAuth 2.0](https://oauth.net/2/) is designed only for authorization, for granting access to data and features from one application to another. OpenID Connect (OIDC) is a thin layer that sits on top of OAuth 2.0 that adds login and profile information about the person who is logged in.
 
-We will go deep into the protocol, see how it work and integrate with traditionnal web application as well as with microservice applications.
+We will go deep into the protocol, see how it works, and integrates with the traditional web application as well as with microservice applications.
 
 ## OAuth basics
 
 * A meta-framework, a protocol of protocols
 * Used as the base of other specifications
-* Oauth is OAuth2
+* OAuth is OAuth2
 * Such as OpenID Connect, UMA, HEART
-* Adresses some important requirements
+* Addresses some important requirements
   * Delegate access
   * No password sharing
   * Revocation of access
 
 ## OAuth actors
 
-* Resource Owner (RO), (end user, organisation, ...)
+* Resource Owner (RO), (end user, organization, ...)
 * Client (web app, mobile app, ...)
 * Authorization Server (AS)
 * Resources Server (RS) (API, ...)
@@ -30,20 +30,20 @@ We will go deep into the protocol, see how it work and integrate with traditionn
 ## Flow
 
 * Request access (signup, login, ...)
-* Login (transparent, username/password, 2 factor auth, ...)
+* Login (transparent, username/password, 2-factor authentication, ...)
 * Consent (allowed the application to access resources on your behalf, can be hidden)
 
 ## Code Flow
 
 * Multiple flows in OAuth, even more in OpenID Connect
 * Most popular is Authentication Code Flow
-* Application require the user to be authenticated
-* User is redirect from the application to the Authorization Server
+* Application requires the user to be authenticated
+* User is redirected from the application to the Authorization Server
 * Once authenticated, consent takes place
 * User authorizes the application to consume resources on his behalf
-* User is redirected to the application with a short live authorisation code
+* User is redirected to the application with a short live authorization code
 * Authorisation code is a Nonce (No More than Once) code
-* Code is exchange for an access token from the client application
+* Code is exchanged for an access token from the client application
 
 ## Scopes
 
@@ -55,13 +55,13 @@ We will go deep into the protocol, see how it work and integrate with traditionn
 ## Kind of tokens
 
 * Access Tokens, like a session, used to secure API calls
-* Refresh Tokens, like a password, used to get new access token
+* Refresh Tokens, like a password, used to get a new access token
 
 ## JWT (JSON Web Token)
 
 * Not the only kind of token supported by OAuth
 * JWT is the most popular
-* Pronounced like the english word "jot"
+* Pronounced like the English word "jot"
 * Lightweight tokens passed in HTTP headers & query strings
 * Encoded as JSON
 * Encrypted, signed, or neither
@@ -71,7 +71,7 @@ We will go deep into the protocol, see how it work and integrate with traditionn
 
 * Not for authentication
 * Not for federation
-* Not really for authorisation
+* Not really for authorization
 * For delegation
 
 ## OpenID Connect
@@ -79,13 +79,13 @@ We will go deep into the protocol, see how it work and integrate with traditionn
 * Based on OAuth2
 * Clients also receive ID Tokens (identity tokens)
 * User info endpoint to get user data
-* Additionnal flow
+* Additional flow
 * Claims, request obj, ...
-* ID Token for the client, shall never be sent (eg to microservices)
+* ID Token for the client shall never be sent (eg to microservices)
 
 ## PKCE
 
-* Pronounced like the english word "pixy"
+* Pronounced like the English word "pixy"
 * Extension to the Authorization Code flow
 * Securely perform the OAuth exchange from public clients
 * No client secret
@@ -94,7 +94,7 @@ We will go deep into the protocol, see how it work and integrate with traditionn
 
 ## Resources
 
-* [An Illustrated Guide to OAuth and OpenID Connect](https://developer.okta.com/blog/2019/10/21/illustrated-guide-to-oauth-and-oidc), video and article, 16mn.
-* [Securing APIs and Microservices with OAuth and OpenID Connect](https://curity.io/resources/videos/securing-apis-and-microservices-with-oauth-and-openid-connect/), video, 45mn.
+* [An Illustrated Guide to OAuth and OpenID Connect](https://developer.okta.com/blog/2019/10/21/illustrated-guide-to-oauth-and-oidc), video and article, 16 min.
+* [Securing APIs and Microservices with OAuth and OpenID Connect](https://curity.io/resources/videos/securing-apis-and-microservices-with-oauth-and-openid-connect/), video, 45 min.
 * [PKCE, RFC 7636: Proof Key for Code Exchange](https://oauth.net/2/pkce/)
 * [What's going on with the OAuth 2.0 Implicit flow?](https://www.youtube.com/watch?v=CHzERullHe8)
