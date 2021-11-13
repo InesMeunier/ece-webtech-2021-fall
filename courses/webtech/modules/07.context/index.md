@@ -75,7 +75,7 @@ const Counter = ({props} => {
 ## API
 
 * Instantiation with new Context
-* One Context.Privider
+* One Context.Provider
 * Multiple Context.Consumer
 * Consumers may use the `useContext(context)` hook
 
@@ -115,7 +115,7 @@ export const ContextProvider ({
 ## Example - Provider registration
 
 ```jsx
-import ContextProvider from './Context'
+import {ContextProvider} from './Context'
 
 ReactDOM.render(
   <React.StrictMode>
