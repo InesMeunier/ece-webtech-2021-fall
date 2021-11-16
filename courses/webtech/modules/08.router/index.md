@@ -11,6 +11,7 @@ SPA stands for SinglePageApplication. It literally means an application that con
 
 * Show different screens to different addresses
 * Honors the browser history
+* User bookmarks
 * Not build-in in React
 * Librairies includes React Router, Reach Router, Next.js
 * React Router 5 is the fusion of React Router and Reach Router
@@ -32,14 +33,8 @@ SPA stands for SinglePageApplication. It literally means an application that con
   ```jsx
   export default () => (
     <Router>
-      <Switch>
-        <Route path="/:id">
-          <Child />
-        </Route>
-        <Route path="/">
-          <home />
-        </Route>
-      </Switch>
+      <Route path="/user/:id" element={<Child />} />
+      <Route path="/" element={<Home />} />
     </Router>
   )
   ```
