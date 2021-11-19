@@ -84,9 +84,11 @@ const Counter = ({props} => {
 ```jsx
 import React, {useState} from 'react'
 
-export const Context = React.createContext();
+const Context = React.createContext();
 
-export const ContextProvider ({
+export default Context;
+
+export const ContextProvider = ({
   children
 }) => {
   const [count, setCount] = useState(0)
